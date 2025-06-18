@@ -20,4 +20,23 @@ for(let i = 0;i<arr1.length;i++){
     }
 }
 console.log(arr1);
-
+//WriteaJSprogramtofindthenoofdigitsinanumber.Example:ifnumber=287152,count=6
+let arr2 = 287152;
+let count = 0;
+let copy = arr2;
+while(copy > 0){
+    copy = Math.floor(copy/10);
+    count++;
+}
+    
+console.log(count);
+//.WriteaJSprogramtofindthesumofdigitsinanumber.Example:ifnumber=287152,sum=25
+let arr3 = 287152;
+let sum = 0;
+let copy1 = arr3; 
+while(copy1>0){
+    digit = copy1 % 10;
+    sum = sum + digit;
+    copy1 = Math.floor(copy1/10);
+}
+console.log(sum);
