@@ -15,6 +15,13 @@ function AreaOfRectangle(){
     let area = length * width;
     return area;
 }
+function AreaOfTriangle(){
+    let base = 5;
+    let height = 10;
+    let area = 0.5 * base * height;
+    return area;
+}
+console.log(AreaOfTriangle());
 console.log(AreaOfRectangle());
 console.log(AreaOfCircle());
 console.log(AddTwo());
