@@ -9,5 +9,12 @@ function AreaOfCircle(){
     let area = 3.14 * radius * radius;
     return area;
 }
+function AreaOfRectangle(){
+    let length = 5;
+    let width = 10;
+    let area = length * width;
+    return area;
+}
+console.log(AreaOfRectangle());
 console.log(AreaOfCircle());
 console.log(AddTwo());
