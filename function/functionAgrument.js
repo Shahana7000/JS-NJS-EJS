@@ -7,5 +7,14 @@ function TablePrint(n){
     }
 
 }
+function isAdult(age){
+    if(age>=18){
+        console.log("adult")
+    }else{
+        console.log("not adult")
+    }
+}
+console.log(isAdult(17));
 console.log(TablePrint(4));
+console.log(TablePrint(5));
 printName("shahana");
