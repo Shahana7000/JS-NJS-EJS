@@ -29,7 +29,17 @@ function isEven(numbers){
             console.log("odd");
         }
     }
+function averageOfnumber(){
+    let a = 50;
+    let b = 60;
+    let c = 70;
+    let sum = a+b+c;
+    let average = sum/3;
+    console.log(average);
 
+} 
+
+console.log(averageOfnumber());
 console.log(isEven(3));  
 console.log(sumOfnumber(5));
 console.log(isAdult(17));
