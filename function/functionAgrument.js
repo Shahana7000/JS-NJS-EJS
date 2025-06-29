@@ -33,8 +33,9 @@ function averageOfnumber(){
     let a = 40;
     let b = 50;
     let c = 70;
-    let sum = a+b+c;
-    let average = sum/3;
+    let d = 60;
+    let sum = a+b+c+d;
+    let average = sum/4;
     console.log(average);
 
 } 
