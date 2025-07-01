@@ -8,5 +8,6 @@ newBtn.style.fontSize = "20px";
 
 newBtn.style.height = "50px";
 newBtn.style.width = "100px";
+newBtn.style.borderRadius = "10px";
 
 document.querySelector("body").prepend(newBtn);
