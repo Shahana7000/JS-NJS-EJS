@@ -1,4 +1,4 @@
-let str = "shahanaparveen";
+let str = "shahanaparveennnn";
 
 function vowelsCount(str){
     let count = 0;
