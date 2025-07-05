@@ -11,3 +11,7 @@ const pow = (a , b) => {
     return a ** b;
 };
 console.log(pow(2,3));
+const multiply = (a , b) =>( 
+    a * b
+);
+console.log(multiply(5,6));
