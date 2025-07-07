@@ -17,3 +17,9 @@ const multiply = (a , b) =>(
 console.log(multiply(5,6));
 const square = (n) => (n*n);
 console.log(square(5));
+const hello = setInterval(() =>{
+    console.log("Hello");},2000);
+    setTimeout(() =>{
+        clearInterval(hello);
+    },100000);
+
