@@ -15,3 +15,5 @@ const multiply = (a , b) =>(
     a * b
 );
 console.log(multiply(5,6));
+const square = (n) => (n*n);
+console.log(square(5));
