@@ -18,5 +18,5 @@ let str = [
         age : 20
     }
 ];
-let single = str.map(user => user.age);
+let single = str.map(user => user.name);
 console.log(single);
