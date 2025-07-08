@@ -34,9 +34,14 @@ console.log(withGSt);
  let num = [1,2,3,4,5,6,7,8,9,10,11];
 
  let even = num.filter((el) =>{
-    return el % 2==0
+    return el % 2 == 0
  });
  console.log(even);
 
- 
+ let odd = num.filter((el) =>{
+    return el % 2 != 0
+ });
+ console.log(odd);
+
+
 
