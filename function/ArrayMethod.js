@@ -76,6 +76,20 @@ console.log(withGSt);
     }
     });
     console.log(checkMultiple);
+ // find minimum number using reduce method
+ 
+ let numss = [1,22,33,55,66,87,88];
+
+ let answers = numss.reduce((min,el) => {
+    if(min > el){
+        return el;
+    }
+    else{
+        return min
+    }
+
+ });
+ console.log(answers);
 
    
 
