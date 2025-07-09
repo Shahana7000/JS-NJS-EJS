@@ -42,6 +42,50 @@ console.log(withGSt);
     return el % 2 != 0
  });
  console.log(odd);
+ 
+
+
+//reduce method
+ let finalVal = num.reduce((res, el) =>{
+    return res + el;
+ });
+
+ console.log(finalVal);
+
+// reduce maximum number
+ let ans = num.reduce((max, el) =>{
+    if(max < el){
+        return el;
+     } else {
+            return max
+        }
+
+
+    
+ });
+ console.log(ans);
+
+ //every function 
+ let nums = [10,34,44,66,55,77];
+ let checkMultiple = nums.every((el) =>{
+    if(el%10 == 0){
+        return true;
+    }
+    else{
+        return false
+    }
+    });
+    console.log(checkMultiple);
+
+   
+
+ 
+
+
+
+
+
+
 
 
 
