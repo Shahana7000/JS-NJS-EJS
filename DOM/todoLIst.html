@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <input placeholder="type something" type="text" id="inp">
+    <button>click</button>
+
+    <ul>
+        <li>eat <button class= "delete">delete</button></li>
+        <li>sleep <button class= "delete">delete</button></li>
+       
+
+    </ul>
+    <script>
+        let btn = document.querySelector("button");
+        let input = document.querySelector("input");
+        let ul = document.querySelector("ul");
+        let list = document.querySelectorAll("li");
+
+        btn.addEventListener("click", function(){
+            let item = document.createElement("li");
+            item.innerText = input.value;
+
+            let delbtn = document.createElement("button");
+            delbtn.innerText ="delete";
+            delbtn.classList.add("delete");
+            item.appendChild(delbtn);
+
+        
+            ul.appendChild(item);
+            input.value = " ";
+        });
+        ul.addEventListener("click",function(event){
+            if(event.target.nodeName === "BUTTON"){
+                let listItem = event.target.parentElement;
+                listItem.remove();
+                console.log("deleted");
+            }
+
+        });
+
+    </script>
+</body>
+</html>
