@@ -39,6 +39,9 @@
         .flash{
             background-color: white;
         }
+        .userflash{
+            background-color: green;
+        }
     </style>
 
 </head>
@@ -57,50 +60,59 @@
         <div class="inner-box purple">4</div>
         </div>
      </div>
-     <script>
-        let gameque = [];
-        let usersqn = [];
+     <<script>
+    let gameque = [];
+    let usersqn = [];
+    let start = false;
+    let level = 0;
+    let btns = ["red", "green", "blue", "purple"];
+    let h2 = document.querySelector("p");
 
-        let start = false;
-
-        let level = 0;
-
-        let btns =["red","green","blue","purple"]
-        let h2 = document.querySelector("p");
-
-
-        document.addEventListener("keypress", function(){
-            if(start == false){
-                console.log("game started ");
-                start = true;
-
-                levelUp();
-
-
-            }
-            
-            
-        });
-        function btnFlash(btn){
-            btn.classList.add("flash");
-            setTimeout(function(){
-                btn.classList.remove("flash");
-            } ,250 );
-
+    document.addEventListener("keypress", function () {
+        if (!start) {
+            console.log("Game started");
+            start = true;
+            levelUp();
         }
-        function levelUp(){
-            level++;
-            h2.innerText = `level ${level}`;
-            
-            let ranInd = Math.floor(Math.random() *3);
-            let ranColor = btns[ranInd];
-            let ranBtn = document.querySelector(`.${ranColor}`);
-            console.log(ranInd);
-            console.log(ranColor);
-            console.log(ranBtn);
-            btnFlash(ranBtn);
-        
-        }
-     </script>
+    });
+
+    function btnFlash(btn) {
+        btn.classList.add("flash");
+        setTimeout(function () {
+            btn.classList.remove("flash");
+        }, 250);
+    }
+    function userflash(btn) {
+        btn.classList.add("userflash");
+        setTimeout(function () {
+            btn.classList.remove("userflash");
+        }, 250);
+    }
+    function levelUp() {
+        level++;
+        h2.innerText = `Level ${level}`;
+
+        let ranInd = Math.floor(Math.random() * 4);
+        let ranColor = btns[ranInd];
+        let ranBtn = document.querySelector(`.${ranColor}`);
+
+        gameque.push(ranColor);
+        btnFlash(ranBtn);
+    }
+
+    function btnPress() {
+        let userColor = this.classList[1]; // gets 'red', 'green', etc.
+        usersqn.push(userColor);
+        btnFlash(this);
+
+        // Here you would call checkAnswer(usersqn.length - 1);
+    }
+
+    let allBtns = document.querySelectorAll(".inner-box");
+    for (let btn of allBtns) {
+        btn.addEventListener("click", btnPress);
+    }
+</script>
+
 </body>
 </html>
