@@ -13,3 +13,14 @@ const info = {
     }
 }
 info.show();
+
+
+let square = (a) => (a * a)
+console.log(square(5)); 
+
+ let id =setInterval(() =>{
+    console.log("hellow world")
+
+},2000)
+
+clearInterval(id);  //clear the interval
